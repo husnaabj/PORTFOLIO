@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* removes scrollbars */
+  height: 100%;
+}
+
+#container {
+    overflow: hidden; /* removes scrollbars */
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/train.jpg');
+    background-size: cover;       /* makes it fill the screen */
+    background-position: center;  /* centers it */
+    background-repeat: no-repeat; /* no repeat */
+}
+
+.Husna {
+  color: white;  /* make text white */
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20vh;
+}
