@@ -1,23 +1,92 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* removes scrollbars */
   height: 100%;
 }
 
 #container {
-    overflow: hidden; /* removes scrollbars */
     width: 100vw;
-    height: 100vh;
-    background-image: url('../image/train.jpg');
+    min-height: 100vh; /* allow content to expand beyond screen height */
+    background-image: url('../image/bg_stars.jpg');
+    background-attachment: fixed; /* <— keeps background fixed even when scrolling */
     background-size: cover;       /* makes it fill the screen */
     background-position: center;  /* centers it */
     background-repeat: no-repeat; /* no repeat */
+    display: grid;
+    grid-template-rows: 1fr 1fr; /*two equal rows*/
 }
 
-.Husna {
-  color: white;  /* make text white */
-  text-align: center;
+.RowResume {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*two equal rows*/;              /* makes children (button + links) sit side by side */
+  align-items: center;        /* vertically centers them */
+  justify-content: center;    /* centers them horizontally (you can use space-between if you prefer spacing) */
+  gap: 20px;                  /* spacing between button and links */
+  margin-top: 30px;           /* adds a bit of top spacing */
+}
+
+/* optional: style the links group */
+.SocialLinks a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.SocialLinks a:hover {
+  color: #ff76d8;
+}
+
+#TittleMyName {
+  margin-top: 5svh;
+  padding: 20px;
+  color: aliceblue;
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Times New Roman, sans-serif;
+  display: block;         /* fixed typo: font-display → display */
+}
+
+#Summary_box {
+  border: 2px solid aliceblue;  /* border thickness, style, and color */
+  padding: 20px;                /* space inside the box */
+  border-radius: 10px;          /* rounded corners */
+  background-color: rgba(0, 0, 0, 0.3); /* optional: semi-transparent background */
+  max-width: 800px;             /* optional: limit box width */
+  margin-left: 20px;               /* center the box horizontally */
+  color: white;                 /* text color */
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align:justify;
+}
+
+#DownloadBtn {
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: 	whitesmoke;
+  background-color: #ff76d8; 
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#DownloadBtn:hover {
+  border-color: #ffa6fc;
+  background-color: #000000;
+  color: #ffa6fc;
+  transform: scale(1.05);
+}
+
+
+#Husna {
+  color: blueviolet;  /* make text white */
   font-size: 2rem;
-  margin-top: 20vh;
+  margin-top: 5svh;
 }
