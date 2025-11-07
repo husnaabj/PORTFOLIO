@@ -17,21 +17,21 @@ html, body {
 }
 
 .RowResume {
-      display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /*two equal rows*/;              /* makes children (button + links) sit side by side */
-  align-items: center;        /* vertically centers them */
-  justify-content: center;    /* centers them horizontally (you can use space-between if you prefer spacing) */
+  display: flex;
   gap: 20px;                  /* spacing between button and links */
   margin-top: 30px;           /* adds a bit of top spacing */
+  align-items: center;
 }
 
 /* optional: style the links group */
 .SocialLinks a {
   color: whitesmoke;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  margin: 0 10px;
+  margin: 10px;
   transition: color 0.3s ease;
 }
 
@@ -63,12 +63,11 @@ html, body {
 }
 
 #DownloadBtn {
-  margin-top: 30px;
   margin-left: 20px;
-  padding: 12px 24px;
-  font-size: 1.2rem;
+  padding: 5px 20px;
+  font-size: 1.0rem;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-weight: 300;
   color: 	whitesmoke;
   background-color: #ff76d8; 
   border: 2px solid transparent;
@@ -84,9 +83,40 @@ html, body {
   transform: scale(1.05);
 }
 
-
-#Husna {
-  color: blueviolet;  /* make text white */
-  font-size: 2rem;
-  margin-top: 5svh;
+.DetailsBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  height: 200px;
+  width: 1000px;
 }
+
+#headings{
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.Box{
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 400;
+  background-color: #ffa6fc80;
+  backface-visibility: 50;
+  border: 2px solid aliceblue;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.BoxAreaFocus{
+  background-color:aquamarine;
+  border: 2px solid aliceblue;
+}
+
+.BoxExp{
+  background-color:darkgray;
+  border: 2px solid aliceblue;
+}
+
+
